@@ -7,12 +7,13 @@
 %
 % - Press 'h' to show all key bindings.
 % - Use 'a' and 'd' to navigate through the trials
+% - Use 'n' and 'm' to cycle through the channels
 % - Use 'w' and 's' to annotate a trial as good and bad, respectively
 % - Keys 1, 2, and 3 can also be used for annotation; 1 = good, 2 = bad, 3 = other.
 % - Peak-to-peak amplitude can be extracted based on a time window (config.PeakWindow)
-% - Use 'f' to modify a Peak Window for an individual trial.
+% - Use 'f' to modify a Peak Window for an individual trial. 
+% - Press 't' to reset the Peak Window to default value
 % - Press 'p' to save annotation_file
-
 
 %%% Basic Usage:
 
