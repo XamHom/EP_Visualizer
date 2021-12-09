@@ -262,7 +262,8 @@ iv = mep_data(peakIndexLB:peakIndexUB);
 [maxVal, maxIdx] = max(iv);
 
 % Compute p2p Value;
-p2p = peak2peak(mep_data(peakIndexLB:peakIndexUB));
+tmp_data = mep_data(peakIndexLB:peakIndexUB);
+p2p = max(tmp_data) - min(tmp_data);
 
 % Return Values;
 minX = obj.Current.Time(peakIndexLB+minIdx - 1);
