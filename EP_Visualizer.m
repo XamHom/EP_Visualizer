@@ -1,4 +1,4 @@
- function Annotation_Matrix = MEP_Visualizer(data, sfreq, config)
+ function Annotation_Matrix = EP_Visualizer(data, sfreq, config)
  
 % EP_Visualizer is a simple MATLAB tool that allows user to visualise and inspect biosignals, such as motor-evoked potentials (MEP) or other evoked potentials (EP).
 % It can be used to extract the peak to peak amplitude of the signals in a pre-defined or manually selected time window and allows for annotation of low quality signals for later rejection.
