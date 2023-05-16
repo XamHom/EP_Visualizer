@@ -1,7 +1,7 @@
- function Annotation_Matrix = MEP_Visualizer(data, config)
+ function Annotation_Matrix = MEP_Visualizer(data, sfreq, config)
  
-% A simple tool to visualise and inspect biosignals, e.g. Motor-evoked
-% potentials (MEP). press 'h' to display key bindings.
+% EP_Visualizer is a simple MATLAB tool that allows user to visualise and inspect biosignals, such as motor-evoked potentials (MEP) or other evoked potentials (EP).
+% It can be used to extract the peak to peak amplitude of the signals in a pre-defined or manually selected time window and allows for annotation of low quality signals for later rejection.
 % 
 % 2021 - Maximilian Hommelsen
 %
@@ -17,16 +17,15 @@
 
 %%% Basic Usage:
 
-%    annotation_matrix = MEP_Visualizer(data)
+%    annotation_matrix = MEP_Visualizer(data, sfreq)
 % or
-%    annotation_matrix = MEP_Visualizer(data, config)   
+%    annotation_matrix = MEP_Visualizer(data, sfreq, config)   
 % 
 % 'data' (matrix) should either have 2d (Samples x Trials) or 3d (Samples x Trials x
 % Channels)
 % 
 % 'config' (struct) contains additional parameters that can be provided/modified by the user.
 % 
-%   config.SamplingFrequency = 10000; % Sampling Fequency in Hz
 %   config.TriggerTime       = 0; % Occurence of Pulse/Trigger; Time in [S] relative to the first sample; If provided, this is used as reference point for the PeakWindow
 %   config.PeakWindow        = [0.02 0.04] % Time Window for calculation of peak to peak amplitude; >> Time in [S] relative to Trigger Time<<
 %   config.ChannelNames      = {'Chan 1', 'Chan 2'} % Cell array with Channel Names. Size needs to be == size(data,3)
@@ -47,7 +46,7 @@
     
     % IInit Structure with Default Settings
     viz = struct;
-    viz.SamplingFrequency = 10000;
+    viz.SamplingFrequency = sfreq;
     viz.PeakWindow = [0.02 0.03]; % ms after Trigger Pulse
     viz.TriggerTime = 0; % Time in ms (from first data sample) at which TMS pulse is aplied
     viz.ChannelNames = {}; % Names of Channels == size(data,3)
