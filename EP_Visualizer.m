@@ -17,9 +17,9 @@
 
 %%% Basic Usage:
 
-%    annotation_matrix = MEP_Visualizer(data, sfreq)
+%    annotation_matrix = EP_Visualizer(data, sfreq)
 % or
-%    annotation_matrix = MEP_Visualizer(data, sfreq, config)   
+%    annotation_matrix = EP_Visualizer(data, sfreq, config)   
 % 
 % 'data' (matrix) should either have 2d (Samples x Trials) or 3d (Samples x Trials x
 % Channels)
