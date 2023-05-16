@@ -8,9 +8,9 @@ The visualizer is a simple script that should work by simply copying it into you
 # How to use EP_Visualizer
 The EP_Visualizer can be called with a simple one-line command:
 
-output_matrix = MEP_Visualizer(data, sfreq)\
+output_matrix = EP_Visualizer(data, sfreq)\
 or \
-output_matrix = MEP_Visualizer(data, sfreq config) if an additional config structure is provided.
+output_matrix = EP_Visualizer(data, sfreq config) if an additional config structure is provided.
 
 The input 'data' should either have two dimensions (Time Samples x Trials) or three dimensions (Time Samples x Trials x  Channels). The input sfreq corresponds to the sampling frequency of the recorded dataset.
 
